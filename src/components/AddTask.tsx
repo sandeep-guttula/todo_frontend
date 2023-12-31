@@ -84,6 +84,13 @@ const AddTask = ({ status, selectedProject }: AddTaskProps) => {
                   setTaskData({ ...taskData, task_name: e.target.value })
                 }
               />
+              <span
+                className={`text-red-500 text-[10px] ${
+                  taskData.task_name.length > 0 ? "hidden" : "block"
+                }`}
+              >
+                Enter the task name
+              </span>
             </div>
             <div className="flex justify-between gap-4">
               <div className="w-full flex flex-col gap-2">
@@ -96,6 +103,13 @@ const AddTask = ({ status, selectedProject }: AddTaskProps) => {
                     setTaskData({ ...taskData, start_date: e.target.value })
                   }
                 />
+                <span
+                  className={`text-red-500 text-[10px] ${
+                    taskData.start_date.length > 0 ? "hidden" : "block"
+                  }`}
+                >
+                  Enter the start date
+                </span>
               </div>
               <div className="w-full flex flex-col gap-2">
                 <Label className="text-[12px] font-normal">Deadline</Label>
@@ -107,6 +121,13 @@ const AddTask = ({ status, selectedProject }: AddTaskProps) => {
                     setTaskData({ ...taskData, end_date: e.target.value })
                   }
                 />
+                <span
+                  className={`text-red-500 text-[10px] ${
+                    taskData.end_date.length > 0 ? "hidden" : "block"
+                  }`}
+                >
+                  Enter the start date
+                </span>
               </div>
             </div>
             <div className="flex flex-col gap-2  ">
